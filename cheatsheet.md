@@ -8,11 +8,15 @@
 
 `docker build -t my-postgres .` Build the custom image
 
+`docker build -t issues-tracker .` Docker build command example
+
 `docker-compose up` Run the container
 
 `docker-compose up -d` Run the container in the background
 
-`docker-compose down` Stop the container service, remove the containers and volumes associated with the service
+`docker-compose down` Stop the container service, remove the containers associated with the service
+
+`docker compose down -v` with removing volumes
 
 # Access the container:
 
@@ -41,3 +45,14 @@
 `\dt` show tables
 
 `\q` quit psql
+
+# Commands
+
+1. `docker build -t issues-tracker .`
+2. `docker-compose up`
+
+# Others
+
+Host name should be container_name (e.x. "postgres") to connect a database in the container.
+
+Host name shuld be `host.docker.internal` to connect to Postgres running on the host machine from the container.
